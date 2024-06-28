@@ -1,5 +1,13 @@
-rock = "Rock"
-paper = "Paper"
-scissor = "Scissor"
+rock = 1
+paper = 2
+scissor = 3
 
-play = input("TYpe in your play: (Rock, Paper, or Scissor)")
+guess = math.rand(1,4)
+
+
+play = input("Type in your play: (Rock, Paper, or Scissor)")
+upCase = play.capitalize
+
+
+def game(computer)
+if play == 
