@@ -10,7 +10,7 @@ def valid():
 def game(player_choice):
   options = ["ROCK", "PAPER", "SCISSOR"]
   bot_choice = random.choice(options)
-  
+
   if player_choice == bot_choice:
         print("It's a tie!")
   elif player_choice == "ROCK":
@@ -31,7 +31,7 @@ def game(player_choice):
 
 def ask_repeat():
   while True:
-    repeat_choice = input("Would you like to play again? (Yes/No): ").upper()
+    repeat_choice = input("Would you like to play again? (Yes/No): ").strip().upper()
     if repeat_choice in ["YES", "NO"]:
       return repeat_choice
     print("Invalid input. Please enter Yes or No.")
