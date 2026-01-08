@@ -1,5 +1,6 @@
 import random
 
+# Ensure the player enters Rock, Paper, or Scissor
 def valid():
   player_choice = input("Type in your play (Rock, Paper, or Scissor): ").upper()
   while player_choice != "ROCK" and player_choice != "PAPER" and player_choice != "SCISSOR":
@@ -7,6 +8,7 @@ def valid():
     player_choice = input("Type in your play (Rock, Paper, or Scissor): ").strip().upper() # .strip() removes accidental spaces
   return player_choice
 
+# Generate the computer's choice and determine the winner
 def game(player_choice):
   options = ["ROCK", "PAPER", "SCISSOR"]
   bot_choice = random.choice(options)
@@ -29,19 +31,20 @@ def game(player_choice):
       else:
           print("You win!", player_choice, "cuts", bot_choice)
 
+# Prompt the user to play again and validate Yes/No input
 def ask_repeat():
   while True:
     repeat_choice = input("Would you like to play again? (Yes/No): ").strip().upper()
-    if repeat_choice in ["YES", "NO"]:
+    if repeat_choice == 'YES' or repeat_choice == 'NO':
       return repeat_choice
     print("Invalid input. Please enter Yes or No.")
 
 def main():
   repeat_choice = "YES"
   while repeat_choice == "YES":
-      player_choice = valid()       # Ask for player's move
-      game(player_choice)           # Play one round
-      repeat_choice = ask_repeat()  # Ask if they want to play again
+      player_choice = valid()
+      game(player_choice)
+      repeat_choice = ask_repeat()
   print("Thank you for playing!")
 
 main()
