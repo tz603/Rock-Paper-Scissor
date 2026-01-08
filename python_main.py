@@ -4,7 +4,7 @@ import random
 def valid():
   player_choice = input("Type in your play (Rock, Paper, or Scissor): ").upper()
   while player_choice != "ROCK" and player_choice != "PAPER" and player_choice != "SCISSOR":
-    print("Invalid input. Please try again.")
+    print("Invalid input. Please enter Rock, Paper, or Scissor.")ss
     player_choice = input("Type in your play (Rock, Paper, or Scissor): ").strip().upper() # .strip() removes accidental spaces
   return player_choice
 
